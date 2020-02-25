@@ -22,3 +22,4 @@ queue.prototype.front = function () {
 queue.prototype.size = function () {
   return this.q.length;
 }
+module.exports = queue;

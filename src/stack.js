@@ -25,3 +25,4 @@ stack.prototype.clear = function () {
 stack.prototype.size = function () {
   return this.s.length;
 }
+module.exports = stack;

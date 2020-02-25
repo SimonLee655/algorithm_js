@@ -10,7 +10,7 @@ priorityQueue.prototype.enqueue = function (element, priority) {
   let added = false;
   for (let index = 0; index < this.q.length; index++) {
     if (qe.priority < this.q[index].priority) {
-      qe.splice(index, 0, qe);
+      this.q.splice(index, 0, qe);
       added = true;
       break;
     }
@@ -38,3 +38,9 @@ priorityQueue.prototype.front = function () {
 priorityQueue.prototype.size = function () {
   return this.q.length;
 }
+priorityQueue.prototype.print = function () {
+  this.q.forEach((e) => {
+    console.log(`element: ${e.element}, priority: ${e.priority}`);
+  })
+}
+module.exports = priorityQueue;
